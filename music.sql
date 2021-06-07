@@ -5,7 +5,7 @@ DROP DATABASE IF EXISTS music;
 
 CREATE DATABASE music;
 
-\c music
+\c music;
 
 CREATE TABLE songs
 (
