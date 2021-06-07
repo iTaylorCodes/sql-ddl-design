@@ -7,7 +7,7 @@ CREATE DATABASE medical_center_db;
 CREATE TABLE Medical_centers
 (
   id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
+  name TEXT NOT NULL
 );
 
 CREATE TABLE Doctors
@@ -42,6 +42,6 @@ CREATE TABLE Diseases
 
 CREATE TABLE Diagnosis
 (
-	visit_id INTEGER REFERENCES Visits
+	visit_id INTEGER REFERENCES Visits,
 	disease_id INTEGER REFERENCES Diseases
 );

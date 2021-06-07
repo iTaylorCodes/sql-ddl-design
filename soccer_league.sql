@@ -23,7 +23,7 @@ CREATE TABLE Players
 CREATE TABLE Referees
 (
   id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
+  name TEXT NOT NULL
 );
 
 CREATE TABLE Seasons
@@ -37,11 +37,11 @@ CREATE TABLE Matches
 (
   id SERIAL PRIMARY KEY,
   home_team_id INTEGER REFERENCES Teams,
-	away_team_id INTEGER REFERENCES Teams
+	away_team_id INTEGER REFERENCES Teams,
 	location TEXT NOT NULL,
 	date DATE NOT NULL,
 	season_id INTEGER REFERENCES Seasons,
-	referee_id INTEGER REFERENCES Referees,
+	referee_id INTEGER REFERENCES Referees
 );
 
 CREATE TABLE Goals
@@ -64,5 +64,5 @@ CREATE TABLE Results
   id SERIAL PRIMARY KEY,
   team_id INTEGER REFERENCES Teams,
 	match_id INTEGER REFERENCES Matches,
-	result TEXT CHECK (result = win) CHECK (result = lose) CHECK (result = draw)
+	result TEXT
 );
