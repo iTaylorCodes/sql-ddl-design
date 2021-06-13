@@ -14,6 +14,7 @@ CREATE TABLE Doctors
 (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL,
+  specialiality TEXT NOT NULL,
   medical_center_id INTEGER REFERENCES Medical_centers
 );
 
